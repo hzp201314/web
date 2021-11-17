@@ -160,7 +160,85 @@ npm init -y
 `cnpm i -g lerna`
 
 
+### 使用lerna初始化项目,会在项目根目录下生成lerna.json文件和packages文件夹
+```bash
+lerna init
+```
 
+### 使用lerna创建package
+```bash
+lerna create <name>
+lerna create core
+lerna create utils
+```
 
+### 使用lerna给所有package安装依赖
+```bash
+lerna add @hzp-cli/utils
+```
+
+### 使用lerna给特定package安装依赖
+```bash 
+lerna add @hzp-cli/utils packages/core/
+```
+
+### 使用lerna清空所有packages依赖
+```bash 
+lerna clean
+```
+注意：packages文件夹下的package.json文件需要手动移除依赖
+
+### 使用lerna bootstrap 重新安装依赖
+```bash 
+lerna bootstrap
+```
+
+### 使用lerna link 链接本地相互依赖
+1.手动在package.json文件下下添加依赖
+```json
+{
+ "dependencies": {
+    "@hzp-cli-dev/utils": "^1.0.0"
+  }
+}
+```
+2.使用lerna link 链接本地库文件
+```bash 
+lerna link
+```
+避免手动进入包目录下使用`npm link @hzp-cli-dev/utils`
+
+### 使用lerna exec执行命令
+```bash 
+lerna exec -- rm -rf node_modules/
+lerna exec --scope @hzp-cli-dev/core -- rm -rf node_modules/
+```
+注意：windows terminal中执行rm命令无效
+
+### 使用lerna run 执行npm script (npm脚本)
+```bash 
+lerna run test
+lerna run --scope @hzp-cli-dev/utils test
+```
+```json
+{
+  "scripts": {
+    "test": "echo \"Error: run tests from root\""
+  }
+}
+```
+### 使用lerna publish 发布上线
+查看当前版本号
+```bash 
+lerna version
+```
+查看与上一个版本那些package有变更
+```bash 
+lerna changed
+```
+查看与上一版本区别,需要代码提交`git add .` `git commit -m ""`
+```bash 
+lerna diff
+```
 
 ## 源码分析

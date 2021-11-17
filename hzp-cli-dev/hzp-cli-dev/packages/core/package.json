@@ -1,0 +1,29 @@
+{
+  "name": "@hzp-cli-dev/core",
+  "version": "1.0.0",
+  "description": "hzp-cli-dev core",
+  "author": "hzp201314 <952646089@qq.com>",
+  "homepage": "https://github.com/hzp201314/web#readme",
+  "license": "ISC",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzp201314/web.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/hzp201314/web/issues"
+  },
+  "dependencies": {
+    "@hzp-cli-dev/utils": "^1.0.0"
+  }
+}
