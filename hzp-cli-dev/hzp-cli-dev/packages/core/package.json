@@ -6,6 +6,9 @@
   "homepage": "https://github.com/hzp201314/web#readme",
   "license": "ISC",
   "main": "lib/core.js",
+  "bin": {
+    "hzp-cli-dev": "bin/index.js"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
