@@ -22,5 +22,8 @@
   },
   "bugs": {
     "url": "https://github.com/hzp201314/web/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
