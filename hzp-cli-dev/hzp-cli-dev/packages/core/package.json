@@ -1,6 +1,6 @@
 {
   "name": "@hzp-cli-dev/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "hzp-cli-dev core",
   "author": "hzp201314 <952646089@qq.com>",
   "homepage": "https://github.com/hzp201314/web#readme",
@@ -24,6 +24,6 @@
     "url": "https://github.com/hzp201314/web/issues"
   },
   "dependencies": {
-    "@hzp-cli-dev/utils": "^1.0.0"
+    "@hzp-cli-dev/utils": "^1.0.1"
   }
 }
