@@ -228,7 +228,7 @@ lerna run --scope @hzp-cli-dev/utils test
 }
 ```
 ### 使用lerna publish 发布上线
-查看当前版本号
+查看当前版本号,如果关联远程仓库并且commit提交代码就会发布新版本并push 和 打tag
 ```bash 
 lerna version
 ```
@@ -236,9 +236,12 @@ lerna version
 ```bash 
 lerna changed
 ```
-查看与上一版本区别,需要代码提交`git add .` `git commit -m ""`
+查看与上一commit版本区别,需要代码提交`git add .` `git commit -m ""`
 ```bash 
 lerna diff
+```
+```bash 
+lerna publish
 ```
 
 ## 源码分析
